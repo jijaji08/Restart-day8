@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+#move{
+    height:150px;
+    width:150px;
+    background-color:green;
+    position:absolute;
+    animation-name: bodyMove;
+    animation-duration: 4s;
+    animation-delay:2s;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards; /*this works as where object get stoped on its initial position or final position 
+    // bydefault value backwards*/
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    
+}
+@keyframes bodyMove {
+    0%{
+    
+      
+      
+      
+        left:0%;
+        top:0%;
+        background-color: green;
+    }
+    25%{
+        left:calc(100% - 150px);
+        top:0%;
+        background-color: yellow;
+    }
+    75%{
+        left:calc(100% - 150px);
+        top:calc(100% - 150px);;
+        background-color: brown;
+    }
+    100%{
+        left:0%;
+        top:calc(100% - 150px);
+        background-color: lavender;
+    }
+    
+}
